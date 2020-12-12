@@ -17,7 +17,7 @@ public class ManageUserServiceImpl implements ManageUserService {
 
 	@Override
 	public List<ManageUser> getUserList() {		  
-	   return ManageUserMapper.getAll();	    
+		return ManageUserMapper.getAll();	    
 	}
 
 }

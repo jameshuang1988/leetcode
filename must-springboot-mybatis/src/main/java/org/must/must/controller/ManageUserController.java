@@ -15,9 +15,7 @@ public class ManageUserController {
 	
 	@RequestMapping("/manageUser")
     public String indexJson() {
-
         List<ManageUser> managerUsers = manageUserService.getUserList();
-
         managerUsers.forEach(
         		value ->System.out.println(String.format("後臺登入帳號密碼 %s,%s", value.getUserId(), value.getUserPassword()))
         );
