@@ -19,13 +19,7 @@ public class DateUtil {
 
 		return str;
 	}
-	
-	/**
-	 * 
-	 * @return
-	 * @Description 返回西元年月日時分 共12碼
-	 * @author Letter1530(Engine) 2018年7月19日
-	 */
+
 	public static String getMinTime() {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
