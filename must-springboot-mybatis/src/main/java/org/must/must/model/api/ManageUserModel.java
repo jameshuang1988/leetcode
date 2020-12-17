@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.must.must.model.ManageUser;
+import org.springframework.context.annotation.Bean;
 
 public class ManageUserModel {
 	private String status;

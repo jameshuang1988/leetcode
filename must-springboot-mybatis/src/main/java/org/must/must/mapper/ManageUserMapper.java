@@ -11,6 +11,6 @@ public interface ManageUserMapper {
 	@Select("SELECT * FROM manage_user")
 	List<ManageUser> getAll();
 
-	@Select("SELECT * FROM manage_user WHERE user_id = #{userId,jdbcType=VARCHAR} ORDER BY user_id DESC")
+	@Select("SELECT * FROM manage_user WHERE user_id = #{userId} ORDER BY user_id DESC")
 	ArrayList<ManageUser> getmanageuserById(@Param("userId") String userid);
 }
