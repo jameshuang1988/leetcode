@@ -7,11 +7,10 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.must.must.model.ManageUser;
 
-
 public interface ManageUserMapper {
-	@Select("SELECT * FROM manage_user")	
+	@Select("SELECT * FROM manage_user")
 	List<ManageUser> getAll();
-	
-	@Select("SELECT * FROM manageuser WHERE user_id = #{userid,jdbcType=VARCHAR} ORDER BY id DESC")
-	ArrayList<ManageUser> getmanageuserById(@Param("userid") String userid);
+
+	@Select("SELECT * FROM manage_user WHERE user_id = #{userId,jdbcType=VARCHAR} ORDER BY user_id DESC")
+	ArrayList<ManageUser> getmanageuserById(@Param("userId") String userid);
 }

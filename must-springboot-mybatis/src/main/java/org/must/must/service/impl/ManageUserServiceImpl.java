@@ -16,8 +16,16 @@ public class ManageUserServiceImpl implements ManageUserService {
 	ManageUserMapper ManageUserMapper;
 
 	@Override
-	public List<ManageUser> getUserList() {		  
-		return ManageUserMapper.getAll();	    
+	public List<ManageUser> getUserList() {
+		return ManageUserMapper.getAll();
+	}
+
+	/**
+	 * @see org.must.must.service.ManageUserService#getUserByUserId(java.lang.String)
+	 */
+	@Override
+	public List<ManageUser> getUserByUserId(String userId) {
+		return ManageUserMapper.getmanageuserById(userId);
 	}
 
 }

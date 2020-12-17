@@ -19,18 +19,18 @@ public class Swagger2Config {
     @Bean
     public Docket docket() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("org.must.must.controller"))
-                .paths(PathSelectors.any())
-                .build();
+            .apiInfo(apiInfo())
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("org.must.must.controller"))
+            .paths(PathSelectors.any())
+            .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("API Docs")
-                .version("v1.0")
-                .build();
+            .title("API Docs")
+            .version("v1.0")
+            .build();
     }
 
 
