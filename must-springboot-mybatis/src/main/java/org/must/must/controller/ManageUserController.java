@@ -2,11 +2,11 @@ package org.must.must.controller;
 
 import java.util.List;
 
+import org.must.must.controller.base.DefaultController;
 import org.must.must.model.ManageUser;
 import org.must.must.model.api.ManageUserModel;
 import org.must.must.service.ManageUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +17,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiParam;
 
 @RestController
-@Api( tags = "Manage User")
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-public class ManageUserController {
+@Api(tags = "Managey資料")
+public class ManageUserController extends DefaultController {
 	@Autowired
 	private ManageUserService manageUserService;
 
