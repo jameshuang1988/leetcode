@@ -7,6 +7,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class ManageUser implements Serializable{
 	/**
 	 * TODO

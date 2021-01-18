@@ -6,14 +6,22 @@
  ******************************************************************************/
 package org.must.must.controller;
 
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.http.protocol.HTTP;
-import org.must.must.aop.logAspect;
+//import org.must.must.aop.logAspect;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.Slf4j;
@@ -34,4 +42,39 @@ public class EnController {
 		log.info("測試log");
 		return "en/index";
 	}
+	@PostMapping("index")
+	public String test(HttpServletRequest request) {		
+		log.info("測試資料上傳");
+		System.out.println("=======GET Process=======");
+        Map<String,String[]> requestMsg = request.getParameterMap();
+//        Enumeration<String> requestHeader = request.getHeaderNames();
+//        System.out.println("------- header -------");
+//        while(requestHeader.hasMoreElements()){
+//            String headerKey=requestHeader.nextElement().toString();
+//            //所有Header值
+//
+//            System.out.println("headerKey="+headerKey+";value="+request.getHeader(headerKey));
+//        }
+        System.out.println("------- parameter -------");
+        for(String key :requestMsg.keySet())
+        {
+            for(int i=0;i<requestMsg.get(key).length;i++)
+            {
+                //所有請求参数值
+
+                System.out.println("key="+key+";value="+requestMsg.get(key)[i].toString());
+            }
+        }
+		return "en/index";
+	}
+	@PostMapping("index2")
+	public String test2(@RequestBody String a) {		
+		log.info("測試資料上傳2");
+		System.out.println("=======GET Process=======");
+        System.out.println("------- parameter -------");
+        System.out.println("RequestBody：："+a);
+		return "en/blank";
+	}
+		
 }
+
