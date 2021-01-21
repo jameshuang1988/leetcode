@@ -9,15 +9,18 @@ import org.must.must.service.ManageUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @RestController
-@Api(tags = "Managey資料")
+@Api(tags = "Manage user資料")
 public class ManageUserController extends DefaultController {
 	@Autowired
 	private ManageUserService manageUserService;
@@ -31,6 +34,7 @@ public class ManageUserController extends DefaultController {
 	}
 
 	@GetMapping("/api/manageUser")
+	@ApiOperation(value = "查找所有資料")
 	public ManageUserModel apiManageUser() {
 		List<ManageUser> managerUsers = manageUserService.getUserList();
 		ManageUserModel manageUserModel = new ManageUserModel();
@@ -41,6 +45,7 @@ public class ManageUserController extends DefaultController {
 	}
 
 	@GetMapping("/api/ManageUser/{userid}")
+	@ApiOperation(value = "依照ID查找資料")
 	public ManageUserModel apiGetManageUserByid(@PathVariable("userid") String userId) {
 		List<ManageUser> managerUsers = manageUserService.getUserByUserId(userId);
 		ManageUserModel manageUserModel = new ManageUserModel();
@@ -54,6 +59,18 @@ public class ManageUserController extends DefaultController {
 	public ManageUserModel apiGetManageUserByUserId(
 			@ApiParam(name = "", value = "使用者帳戶", required = true) @RequestParam(value = "userid", required = true) String userId) {
 		List<ManageUser> managerUsers = manageUserService.getUserByUserId(userId);
+		ManageUserModel manageUserModel = new ManageUserModel();
+		manageUserModel.setData(managerUsers);
+		manageUserModel.setMessage("SUCCESS");
+		manageUserModel.setStatus("0");
+		return manageUserModel;
+	}
+	
+
+	@PostMapping("/api/search")
+	public ManageUserModel apiSearchByUserId(ManageUserModel user) {
+		System.out.println("進入api search   userid="+user.getUserId());
+		List<ManageUser> managerUsers = manageUserService.getUserByUserId(user.getUserId());
 		ManageUserModel manageUserModel = new ManageUserModel();
 		manageUserModel.setData(managerUsers);
 		manageUserModel.setMessage("SUCCESS");

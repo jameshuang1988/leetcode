@@ -6,23 +6,19 @@
  ******************************************************************************/
 package org.must.must.controller;
 
-import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.http.protocol.HTTP;
+import org.must.must.model.Contact;
 //import org.must.must.aop.logAspect;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -67,13 +63,19 @@ public class EnController {
 		return "en/index";
 	}
 	@PostMapping("index2")
-	public String test2(@RequestBody String a) {		
-		log.info("測試資料上傳2");
-		System.out.println("=======GET Process=======");
-        System.out.println("------- parameter -------");
-        System.out.println("RequestBody：："+a);
+	public String test2(@RequestParam Map<String, Object> contact,HttpServletRequest request) {	
+		log.info("測試資料上傳2:"+contact);
+		request.setAttribute("contact", contact);
 		return "en/blank";
 	}
+	
+	@PostMapping("index3")
+	public String test3(Contact contact) {	
+		log.info("測試資料上傳3:"+contact.getName());
+		return "en/blank";
+	}
+	
+	
 		
 }
 

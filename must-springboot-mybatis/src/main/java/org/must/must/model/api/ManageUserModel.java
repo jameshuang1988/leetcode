@@ -1,15 +1,28 @@
 package org.must.must.model.api;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.must.must.model.ManageUser;
-import org.springframework.context.annotation.Bean;
 
-public class ManageUserModel {
+public class ManageUserModel implements Serializable {
+	/**
+	 * TODO
+	 */
+	private static final long serialVersionUID = 7630976759662424586L;
+	private String userId;
 	private String status;
 	private ArrayList<ManageUser> data;
 	private String message;
+	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
 	public String getStatus() {
 		return status;
