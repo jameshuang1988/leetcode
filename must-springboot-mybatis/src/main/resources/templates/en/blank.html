@@ -76,7 +76,11 @@
             <input type="text" class="form-control" id="userId" name="userId"/>
         </div>
     </div>
-
+	<input name="divide" type="checkbox" value="newline" /> <label>換行</label>
+	<input name="divide" type="checkbox" value="tab"> <label>TAB</label>
+	<input name="divide" type="checkbox" value="semicolon"> <label>分號</label>
+	<input name="divide" type="checkbox" value="colon"> <label>逗點</label>
+	<input name="divide" type="checkbox" value="blank"> <label>空格</label>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" id="bth-search"
@@ -102,7 +106,7 @@
 		    $("#btn-search").prop("disabled", true);
 		    $.ajax({
 		        type: "POST",
-		        url: "/api/search",
+		        url: "/api/search2",
 		        data: $('#search-form').serialize(),
 		        dataType: 'json',
 		        cache: false,

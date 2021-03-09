@@ -1,29 +1,58 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta charset="UTF-8">
-<!--  thymeleaf 通過在標籤裡添加額外屬性来绑定動態數據 -->
-<title th:text="${title}">Title</title>
-<!-- 在/resources/static/js下創建一個hello.js 用如下语法依賴即可-->
-<script type="text/javascript" th:src="@{/js/hello.js}"></script>
+<title>Title</title>
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 </head>
 <body>
-	<h1 th:text="${desc}">Hello World</h1>
+	<!-- <h1 th:text="${desc}">Hello World</h1>
 	<h2>=====Message=====</h2>
 	<p th:text="${author?.name}"></p>
 	<p th:text="${author?.age}"></p>
-	<p th:text="${author?.email}"></p>
-
+	<p th:text="${author?.email}"></p> -->
 	<div id="app">{{ message }}</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<div id="box">
+		<input type="button" @click="post()" value="點我拿資料(Post)">
+		{{ message2 }}
+	</div>	
 	<script>
+	window.onload = function(){
+		new Vue({
+			el : '#box',
+			data : {
+				message2 : '第二行資料!'
+			},
+		    methods:{
+		        post:function(){
+		            //发送 post 请求
+		            this.$http.get('http://127.0.0.1/api/manageUser',{userId:"DD",url:"http://www.runoob.com"},{emulateJSON:true}).then(function(res){
+		            	var data = JSON.stringify(res);
+		            	alert(res.body.data.length);
+		            	document.write(data+"   ");  
+		            	document.write(res.body.status+"  "); 
+		            	document.write(res.body.data[0].userId+"  "); 
+		            	for (i=0; i<res.body.data.length;i++) {
+		            		document.write(res.body.data[i].userId+"  ");
+		            		document.write(res.body.data[i].userPassword+"  ");
+		            		document.write("<br>");
+	            		}
+		            	
+	                },function(res){
+	                    console.log(res.status);
+	                });
+		        }
+		    }
+		});
 		new Vue({
 			el : '#app',
 			data : {
-				message : 'Hello World!123456'
-			}
+				message : 'Hello World!'
+			},
+		   
 		});
+	}	
 	</script>
 
 </body>
