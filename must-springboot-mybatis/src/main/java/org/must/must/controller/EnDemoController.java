@@ -58,19 +58,19 @@ public class EnDemoController {
                 System.out.println("key="+key+";value="+requestMsg.get(key)[i].toString());
             }
         }
-		return "en/index";
+		return "en/indexDemo";
 	}
 	@PostMapping("indexDemo2")
 	public String test2(@RequestParam Map<String, Object> contact,HttpServletRequest request) {	
 		log.info("測試資料上傳2:"+contact);
 		request.setAttribute("contact", contact);
-		return "en/blank";
+		return "en/blankDemo";
 	}
 	
 	@PostMapping("indexDemo3")
 	public String test3(Contact contact) {	
 		log.info("測試資料上傳3:"+contact.getName());
-		return "en/blank";
+		return "en/blankDemo";
 	}
 	
 	
