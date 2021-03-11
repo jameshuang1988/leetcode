@@ -29,12 +29,12 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @Slf4j
 @RequestMapping(value = "must")
-public class EnController {
+public class EnDemoController {
 	
 	@GetMapping("index")// 带上 “/” 是绝对路径，不带  “/” 是相对路径。这个"/" 其实起到连接作用， 如果只是单纯的一个地址，写不写 “/” 都可以。
 	public String index(HttpServletRequest request) {		
 		log.info("測試log");
-		return "en/index";
+		return "en/indexDemo";
 	}
 	@PostMapping("index")
 	public String test(HttpServletRequest request) {		
