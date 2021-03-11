@@ -31,12 +31,12 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "must")
 public class EnDemoController {
 	
-	@GetMapping("index")// 带上 “/” 是绝对路径，不带  “/” 是相对路径。这个"/" 其实起到连接作用， 如果只是单纯的一个地址，写不写 “/” 都可以。
+	@GetMapping("indexDemo")// 带上 “/” 是绝对路径，不带  “/” 是相对路径。这个"/" 其实起到连接作用， 如果只是单纯的一个地址，写不写 “/” 都可以。
 	public String index(HttpServletRequest request) {		
 		log.info("測試log");
 		return "en/indexDemo";
 	}
-	@PostMapping("index")
+	@PostMapping("indexDemo")
 	public String test(HttpServletRequest request) {		
 		log.info("測試資料上傳");
 		System.out.println("=======GET Process=======");
@@ -60,14 +60,14 @@ public class EnDemoController {
         }
 		return "en/index";
 	}
-	@PostMapping("index2")
+	@PostMapping("indexDemo2")
 	public String test2(@RequestParam Map<String, Object> contact,HttpServletRequest request) {	
 		log.info("測試資料上傳2:"+contact);
 		request.setAttribute("contact", contact);
 		return "en/blank";
 	}
 	
-	@PostMapping("index3")
+	@PostMapping("indexDemo3")
 	public String test3(Contact contact) {	
 		log.info("測試資料上傳3:"+contact.getName());
 		return "en/blank";
