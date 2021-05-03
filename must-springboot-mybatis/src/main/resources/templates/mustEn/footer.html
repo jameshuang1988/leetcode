@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+	<!-- Footer Area -->
+<!-- 	<div th:fragment="footer"> 如果要用include的話 就要用這種-->
+	<footer  th:fragment="footer" class="footer-area" th:style="'background-image:url(' + @{/mustEn/img/footer-bg.jpg} + ');'">
+		<!-- Footer Top -->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-widget footer-about">
+							<div class="footer-logo">
+								<a class="logo" href="#">
+									<img th:src="@{/mustEn/image/logo.gif}" alt="#">
+								</a>
+							</div>
+							<div class="about-description">
+								<p>MÜST, Music Copyright Society of Chinese Taipei.</p>
+							</div>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Quick Links -->
+						<div class="single-widget f-links">
+							<h3 class="widget-title">Quick Links</h3>
+							<ul>
+								<li><a href="about_index"><i class="fa fa-angle-double-right"></i>About MÜST</a></li>
+<!-- 								<li><a href="tariff"><i class="fa fa-angle-double-right"></i>Tariff</a></li> -->
+								<li><a href="oversea_societies"><i class="fa fa-angle-double-right"></i>Oversea Societies</a></li>
+								<li><a href="link"><i class="fa fa-angle-double-right"></i>Link</a></li>
+								<li><a href="contact"><i class="fa fa-angle-double-right"></i>Contact us</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Single-Widget -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Latest Post -->
+						<div class="single-widget">
+							<h3 class="widget-title">Latest News</h3>
+							<div class="widget-post">
+								<div class="post-img">
+									<a href="#"><img th:src="@{/mustEn/image/logo.png}" alt="#"></a>
+								</div>
+								<div class="post-content">
+									<h4><a href="#">MÜST has a total of 1932 members <br>(songwriters and music publishers)<br> by the end of 2020.</a></h4>
+									<span class="post-date"><i class="fa fa-clock-o"></i>1st Jan 2021</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Single-Widget -->
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-widget">
+							<h3 class="widget-title">Contact</h3>
+							<!-- Footer Contact -->
+							<div class="footer-contact">
+								<ul class="contact-bottom">
+									<li><a href="#"><i class="fa fa-map-marker"></i>4F, 71, Section 2, Nanjing E. Road, Taipei, Taiwan</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>+886 2 2511 0869</a></li>
+									<li><a href="#"><i class="fa fa-envelope"></i>service@must.org.tw</a></li>
+								</ul>
+							</div>
+							<!-- Footer Social -->
+							<div class="f-social">
+								<ul>
+									<li><a href="https://goo.gl/maps/7MAtkhX5bKNjiiDY6"><i class="fa fa-map-marker"></i></a></li>
+									<li><a href="https://www.facebook.com/mustmusictaiwan/"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.youtube.com/channel/UCH10LB8PpHTkVF8zQUKP1Ig/videos"><i class="fa fa-youtube"></i></a></li>
+									<li><a href="http://musttaiwanorg.blogspot.com/"><i class="fa fa-book"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- End-Single-Widget -->
+				</div>
+			</div>
+		</div>
+		<!-- End Footer Top -->
+		<!-- Copyright -->
+		<div class="copyright">
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-lg-12 col-md-12 col-12"> -->
+<!-- 						<div class="copyright-text"> -->
+<!-- 							<p><a href="#">MÜST</a> </p> -->
+<!-- 							<p>Copyright © 2021 <a href="#">MÜST</a> All Rights Reserved. 再看要不要放copyright</p> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+		</div>
+		<!-- End Footer Copyright -->
+	</footer>
+<!-- 	</div> -->
+	<!-- End Footer Area -->	
+</body>
+</html>

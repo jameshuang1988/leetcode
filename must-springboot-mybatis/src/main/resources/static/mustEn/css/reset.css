@@ -296,7 +296,7 @@ input:-webkit-autofill:focus {
 }
 
 
-/* Precon Options */  
+/* Precon Options 預設*/  
 .elena-options {
     position: fixed;
     display: block;
@@ -429,8 +429,147 @@ input:-webkit-autofill:focus {
 	position:relative;
 }
 
+/* Precon Options2 */  
+.elena-options2 {
+    position: fixed;
+    display: block;
+    z-index: 99998;
+    padding: 20px;
+    height: 180px;
+    width: 60px;
+    background: #fff;
+    text-align: left;
+    top: 50%;
+    margin-top: -172.95px;
+    -webkit-box-shadow: -3px 0px 25px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -3px 0px 25px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: -3px 0px 25px -2px rgba(0, 0, 0, 0.2);
+    z-index: 1300000;
+    right: -60px;
+    margin-top: -215px;
+    font-size: 25px;
+}
+.elena-options2 .icon {
+	position: absolute;
+	left: -50px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	border-radius: 5px 0 0 5px;
+	background: #fff;
+	color: #444;
+	text-align: center;
+	background: #fff;
+	color: #555 !important;
+	top: 0;
+	cursor: pointer;
+	box-shadow: -7px 1px 8px #00000012;
+}
+.elena-options2 .icon i {
+	cursor: pointer;
+}
+.elena-options2 h4 {
+	display: block;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.elena-options2 ul li{
+	font-weight:500;
+	font-size:14px;
+}
+.elena-options2 ul li a{
+	color:#555;
+}
+
+.elena-options2 .select-layout a {
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 5px 0;
+	outline: none;
+	display: inline-block;
+	padding: 5px 17px;
+	color: #353535;
+	cursor:pointer;
+}
+.elena-options2 .single-option {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+	outline:none;
+}
+.elena-options2 .single-option:last-child{
+	margin:0;
+	padding:0;
+	border:none;
+}
+.elena-options2 .single-option p {
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+.elena-options2 .single-option ul li {
+	line-height: 20px;
+	margin-bottom: 15px;
+	font-size:25px;
+}
+.elena-options2 .single-option .bg-pattern {
+    margin-top: -3px;
+}
+.elena-options2 .single-option .bg-pattern li {
+    display: inline-block;
+    margin-top: 3px;
+}
+.elena-options2 .single-option .bg-pattern li img {
+    width: 46px;
+    height: 36px;
+}
+.elena-options2 span {
+    width: 48px;
+    height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #f5f5f5;
+	position:relative;
+}
+.elena-options2 span:before,
+.elena-options2 span:after{
+    content: "";
+    position: absolute;
+	width: 100%;
+    height: 100%;
+	left:0;
+}
+/* Skin 1 */
+.elena-options2 span.skin1:before {
+    background: #28B463;
+}
+.elena-options2 span.skin2:before {
+    background: #FC6761;
+}
+.elena-options2 span.skin3:before {
+    background: #6a89cc;
+}
+.elena-options2 span.skin4:after {
+    background: #1ABC9C;
+}
+.elena-options2 span.skin5:before {
+    background: #e67e22;
+}
+.elena-options2 span.skin6:before {
+    background: #78e08f;
+}
+.elena-options2 span.skin7:before {
+    background: #38ada9;
+}
+.elena-options2 span.skin8:before {
+    background: #F3A712;
+}
+.elena-options2 span{
+	position:relative;
+}
+
 /*============================
-	Preloader Area CSS
+	Preloader Area CSS(正方形)
 ===============================*/ 
 .preloader-area {
     position: fixed;
@@ -510,7 +649,69 @@ input:-webkit-autofill:focus {
   } 
 }
 
+
 /*============================
 	End Preloader Area CSS
 ===============================*/ 
+/*============================
+	Preloader Area CSS(beats型)
+===============================*/ 
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -20px;
+  top: 30%;
+}
+
+.spinner > div {
+  background-color: #28B463;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
 

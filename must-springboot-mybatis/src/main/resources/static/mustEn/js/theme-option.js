@@ -14,6 +14,18 @@
 			return false;
 
 		});
+		/* Bonik Settings2 */
+		$('.elena-options2 .icon').on('click', function(event){
+			event.preventDefault();
+			if( $ (this).hasClass('inOut')  ){
+				$('.elena-options2').stop().animate({right:'0px'},500 );
+			} else{
+				$('.elena-options2').stop().animate({right:'-60px'},500 );
+			} 
+			$(this).toggleClass('inOut');
+			return false;
+
+		});
 
 		/* Bonik Colors */
 		$(".skin1" ).on('click', function(){

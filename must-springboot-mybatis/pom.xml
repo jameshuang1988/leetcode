@@ -4,7 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
     <modelVersion>4.0.0</modelVersion>
     <artifactId>must-springboot2-mybatis-mysql</artifactId>
-    <packaging>jar</packaging>
+<!--     <packaging>jar</packaging> -->
+    <packaging>war</packaging>
     <name>must-springboot2-mybatis-mysql</name>
     <parent>
 	    <groupId>org.springframework.boot</groupId>
@@ -68,12 +69,16 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
     </dependencies>
     
     
     <build>
-        <finalName>must-springboot2-mybatis-mysql</finalName>
+        <finalName>mustEn</finalName>
         <plugins>
 		    <plugin>
 		        <groupId>org.springframework.boot</groupId>

@@ -46,13 +46,13 @@ public class ThymeleafController {
 	public String index2(HttpServletRequest request) {
 		// TODO 與上面的寫法不同，但是结果一致。
 		log.info("進入Controller index2");
-		request.setAttribute("title", "Thymeleaf TEST 3 ");
-		request.setAttribute("desc", "welcome to Thymeleaf:vue.js web 系统 第三頁");
-		Author author = new Author();
-		author.setAge(30);
-		author.setEmail("james.huang@must.org.com");
-		author.setName("詹姆斯");
-		request.setAttribute("author", author);
+//		request.setAttribute("title", "Thymeleaf TEST 3 ");
+//		request.setAttribute("desc", "welcome to Thymeleaf:vue.js web 系统 第三頁");
+//		Author author = new Author();
+//		author.setAge(30);
+//		author.setEmail("james.huang@must.org.com");
+//		author.setName("詹姆斯");
+//		request.setAttribute("author", author);
 		// 返回的 index 默認映射到 src/main/resources/templates/xxxx.html
 		return "test/vueTest";
 	}

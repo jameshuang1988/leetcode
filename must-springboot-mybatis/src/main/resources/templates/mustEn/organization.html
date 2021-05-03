@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:replace="mustEn/head"></div>
+<body>
+	<div th:replace="mustEn/header :: header"></div>
+	<div th:replace="mustEn/header :: breadcrumbs-organization"></div>
+	<section class="blog-single-post section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-12">
+					<div class="row">
+						<div class="col-12">
+							<div class="single-area">
+								<!-- Blog Head -->
+								<div class="single-head">
+									<img th:src="@{/mustEn/image/Organization_Chart.png}">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div th:replace="mustEn/footer :: footer"></div>
+</body>
+</html>

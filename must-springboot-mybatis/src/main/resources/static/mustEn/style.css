@@ -226,7 +226,6 @@ Version: 1.0.0
 /*======================================
 	End Header CSS
 ========================================*/  
-
 /*======================================
 	Hero Area CSS
 ========================================*/ 
@@ -241,14 +240,15 @@ Version: 1.0.0
 }
 .hero-slider .single-slider{
 	height: 600px;
-	background-size: cover;
+	background-size: auto;
 	background-position: center;
 	background-repeat: no-repeat;
 	position:relative;
 }
 .hero-area .hero-content {
 	z-index: 55;
-	margin: 156px 0 0;
+/* 	margin: 156px 0 0; */
+	margin: 50px 0 0;
 	position: relative;
 }
 .hero-area .hero-content span {
@@ -262,7 +262,7 @@ Version: 1.0.0
 }
 .hero-area .hero-content h1 {
 	color: #333;
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 700;
 	line-height: 58px;
 	margin: 0;
@@ -816,6 +816,34 @@ Version: 1.0.0
 .portfolio-single .p-button:hover{
 	background:#fff;
 	color:#26313C;
+}
+/*Contact us CSS*/
+.p-contact-widget {
+	margin-bottom: 30px;
+	background: #ffff;
+	padding: 30px;
+	box-shadow: 0px 0px 10px #00000024;
+}
+.p-contact-widget:last-child {
+	margin: 0;
+}
+/* .contact-info h4 { */
+/*     text-align:center; */
+/* } */
+.contact-info li {
+    margin-bottom: 15px;
+}
+.contact-info li i {
+    margin-right: 10px;
+    color: #23B563;
+}
+.contact-info li:last-child{
+	margin:0;
+}
+.contact-info li span {
+    color: #333;
+    font-weight: 600;
+    margin-right: 5px;
 }
 
 /* Portfolio Single CSS */ 
@@ -1413,7 +1441,7 @@ Version: 1.0.0
     border-radius: 4px;
 }
 .single-blog .blog-img{
-	transition
+	transition:all 0.8s ease;
 }
 .single-blog .blog-img img{
 	-webkit-transition:all 0.8s ease;
@@ -2073,6 +2101,7 @@ Version: 1.0.0
 	Contact Area CSS
 ========================================*/ 
 .contact-area {
+	height:800px;
 	padding: 110px 0px;
 	background: #F7F7F7;
 	position: relative;
@@ -2137,8 +2166,11 @@ Version: 1.0.0
 }
 /* Google Map */
 .maps-area{
-	height: 450px;
+	height: 700px;
 	overflow:hidden;
+	margin-top: 100px;
+	margin-left: 50px;
+/* 	margin-bottom:100px; */
 }
 .maps-area .main-maps{
 	width: 100%;
@@ -2146,7 +2178,23 @@ Version: 1.0.0
 .maps-area .main-maps iframe {
 	border: 0;
 	width: 100%;
-	height: 450px;
+	height: 600px;
+}
+/* OS-Google Map */
+.maps-area-OS{
+	height: 700px;
+	overflow:hidden;
+/* 	margin-top: 100px; */
+	margin-left: 0px;
+/* 	margin-bottom:100px; */
+}
+.maps-area-OS .main-maps{
+	width: 100%;
+}
+.maps-area-OS .main-maps iframe {
+	border: 0;
+	width: 100%;
+	height: 600px;
 }
 /* Mail Success */
 .success.page {
@@ -2863,6 +2911,7 @@ Version: 1.0.0
 }
 .copyright .copyright-text p {
 	color: #ccc;
+	text-align:center;
 }
 .copyright .copyright-text p a {
 	color: #fff;

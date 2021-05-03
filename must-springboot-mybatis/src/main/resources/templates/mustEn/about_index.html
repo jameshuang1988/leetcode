@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:replace="mustEn/head"></div>
+<body>
+	<div th:replace="mustEn/header :: header"></div>
+	<div th:replace="mustEn/header :: breadcrumbs-about"></div>
+	<section class="blog-single-post section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="single-area">
+									<!-- Blog Head -->
+									<div class="single-head">
+<!-- 										<img src="img/blog-single.jpg" alt="#"> -->
+										<div class="blog-title-meta">
+											<!-- Blog Meta -->
+<!-- 											<div class="blog-meta"> -->
+<!-- 												<span><i class="fa fa-user"></i><a href="#">By Piklo D. Sindom</a></span> -->
+<!-- 												<span><i class="fa fa-calendar"></i>05 June, 2019</span> -->
+<!-- 												<span><i class="fa fa-comments"></i>30 comments</span> -->
+<!-- 											</div> -->
+											<h1><span><i class="fa fa fa-play-circle-o"></i></span>&ensp;Brief Introduction</h1>
+										</div>
+									</div>
+									<!-- Blog Content -->
+									<div class="single-content">										
+										<p>&emsp;&emsp;MÜST, Music Copyright Society of Chinese Taipei, founded in 1999 in Taiwan, is under the regulation of Copyright Collective Management Organization Act.  MÜST has a total of 1932 members (songwriters and music publishers) by the end of 2020.  MÜST is the most representative and major music copyright society in Taiwan.</p>
+										<p>&emsp;&emsp;MÜST’s major function is to collectively manage the public broadcasting, public performance and public transmission rights of its members.</p>
+										<p>&emsp;&emsp;As the sole active member of <a href="https://www.cisac.org/" target="_blank">CISAC</a> (Confédération Internationale des Sociétés d'Auteurs et Compositeurs) for music copyright in Taiwan, MÜST, by entering into the bilateral agreement with CISAC's members, can therefore administer over 70,000,000 musical works around the world, including 200,000 domestic musical works.</p>
+									<br>
+									</div>	
+									<div class="blog-title-meta">
+										<h1><span><i class="fa fa-play-circle-o"></i></span>&ensp;The Mode of Operation</h1>
+										<img th:src="@{/mustEn/image/operation.png}">
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- 			</div> -->
+		</section>
+	<div th:replace="mustEn/footer :: footer"></div>
+</body>
+</html>
