@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
     <modelVersion>4.0.0</modelVersion>
     <artifactId>must-springboot2-mybatis-mysql</artifactId>
-<!--     <packaging>jar</packaging> -->
-    <packaging>war</packaging>
+	<packaging>jar</packaging>
+<!--     <packaging>war</packaging> 打包war加的-->
     <name>must-springboot2-mybatis-mysql</name>
     <parent>
 	    <groupId>org.springframework.boot</groupId>
@@ -69,16 +69,18 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
+<!-- 		<dependency> 打包war加的,段落開始-->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-tomcat</artifactId> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> 打包war加的，段落結束-->
+		<!-- Excel 依賴 -->
+		
     </dependencies>
     
     
     <build>
-        <finalName>mustEn</finalName>
+        <finalName>en</finalName>
         <plugins>
 		    <plugin>
 		        <groupId>org.springframework.boot</groupId>

@@ -4,7 +4,7 @@
  * Copyright (c) 2021.中華音樂著作權協會版權所有. 
  * 注意：本內容僅限於中華音樂著作權協會內部傳閱，禁止外洩以及用於其他商業目的
  ******************************************************************************/
-package org.must.must.controller.overseaSocieties;
+package org.must.must.controller.overseasSocieties;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,11 +24,11 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @Slf4j
 @RequestMapping(value = "must")
-public class OverseaSocietiesController extends DefaultController{
+public class OverseasSocietiesController extends DefaultController{
 	
-	@GetMapping("oversea_societies")
+	@GetMapping("overseas_societies")
 	public String index(HttpServletRequest request) {
-		log.info("進入oversea_societies Controller");
-		return "mustEn/oversea_societies";
+		log.info("進入overseas_societies Controller");
+		return "mustEn/overseas_societies";
 	}	
 }
