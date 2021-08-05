@@ -68,7 +68,7 @@
 <body>
 測試blank.html
 <p th:text="${contact?.name}"></p>
-
+<p th:text="${contact?.email}"></p>
 <form class="form-horizontal" id="search-form">
     <div class="form-group form-group-lg">
         <label class="col-sm-2 control-label">ajax查詢：</label>
@@ -83,7 +83,7 @@
 	<input name="divide" type="checkbox" value="blank"> <label>空格</label>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" id="bth-search"
+            <button type="submit" id="btn-search"
                     class="btn btn-primary btn-lg">搜索
             </button>
         </div>

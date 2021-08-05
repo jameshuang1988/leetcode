@@ -5,7 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>must-springboot2-mybatis-mysql</artifactId>
 	<packaging>jar</packaging>
-<!--     <packaging>war</packaging> 打包war加的-->
+<!-- 打包war加的 start-->
+<!--     <packaging>war</packaging>  -->
+<!--     打包war加的 end -->
     <name>must-springboot2-mybatis-mysql</name>
     <parent>
 	    <groupId>org.springframework.boot</groupId>
@@ -69,11 +71,29 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 		</dependency>
-<!-- 		<dependency> 打包war加的,段落開始-->
+		<!--JXLS EXCEL工具 -->
+		<dependency>
+			<groupId>org.jxls</groupId>
+			<artifactId>jxls</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jxls</groupId>
+			<artifactId>jxls-poi</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jxls</groupId>
+			<artifactId>jxls-jexcel</artifactId>
+			<version>1.0.9</version>
+		</dependency>
+<!-- 		 打包war加的,段落開始 -->
+<!-- 		<dependency> -->
 <!-- 			<groupId>org.springframework.boot</groupId> -->
 <!-- 			<artifactId>spring-boot-starter-tomcat</artifactId> -->
 <!-- 			<scope>provided</scope> -->
-<!-- 		</dependency> 打包war加的，段落結束-->
+<!-- 		</dependency> -->
+<!-- 			打包war加的，段落結束 -->
 		<!-- Excel 依賴 -->
 		
     </dependencies>

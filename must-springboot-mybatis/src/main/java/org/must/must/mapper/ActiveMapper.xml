@@ -5,6 +5,7 @@
         select * from Active;
     </select>
     <select id="getActiveById" resultType="org.must.must.model.Active">
-        select * from Active;
+        select * from Active
+        WHERE act_Id = #{actId};
     </select>
 </mapper>

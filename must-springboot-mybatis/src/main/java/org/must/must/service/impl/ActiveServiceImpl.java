@@ -30,6 +30,7 @@ public class ActiveServiceImpl implements ActiveService{
 	 */
 	@Override
 	public List<Active> getAllActive() {
+//		return ActiveMapper.getAllActive();
 		return ActiveMapper.getAllActive();
 	}
 
@@ -38,7 +39,7 @@ public class ActiveServiceImpl implements ActiveService{
 	 */
 	@Override
 	public List<Active> getActiveById(String Id) {
-		return null;
+		return ActiveMapper.getActiveById(Id);
 	}
 
 }

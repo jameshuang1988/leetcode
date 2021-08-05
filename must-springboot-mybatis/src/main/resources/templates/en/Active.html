@@ -94,8 +94,8 @@
 			alert(123);
 			$.ajax({
 		        type: "GET",
-		        url: "/api/active",
-		        //data: $('#search-form').serialize(),
+		        url: "/api/active/",
+// 		        data: $('#bth-search').serialize(),
 		        dataType: 'json',
 		        cache: false,
 		        timeout: 600000,
@@ -112,6 +112,41 @@
 		            console.log("ERROR : ", e);
 		        }
 		    });
+			$('form').on('submit', function(event) {
+			alert("summmmit");
+			  event.preventDefault();
+			  x=$("form").serializeArray();//直接取序列化的值
+// 			  alert(x[0].value);
+// 			  alert(x[1].value);
+			 // alert(x[0].value);//'firstname'的值'Hello'
+			  //alert(x[1].value);//'lastname'的值'World'
+			  console.log("值是多少?："+ x[0].value);
+			  console.log("值是多少："+ $(this).serialize() );
+			  
+			  $.ajax({
+			        type: "GET",
+			        url: "/api/activeById/"+x[0].value,
+//	 		        data: $('#bth-search').serialize(),
+			        dataType: 'json',
+			        cache: false,
+			        timeout: 600000,
+			        success: function (data) {
+			            var json = "<h4>Ajax Response</h4><pre>"
+			                + JSON.stringify(data, null, 4) + "</pre>";
+			            $('#feedback').html(json);
+			            console.log("SUCCESS : ", data);
+			        },
+			        error: function (e) {
+			            var json = "<h4>Ajax Response</h4><pre>"
+			                + e.responseText + "</pre>";
+			            $('#feedback').html(json);
+			            console.log("ERROR : ", e);
+			        }
+			    });
+			  
+			  
+			  
+			});
 		});
 
 		</script>

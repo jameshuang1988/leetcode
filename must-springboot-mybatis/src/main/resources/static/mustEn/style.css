@@ -611,10 +611,21 @@ Version: 1.0.0
 .single-service .service-content {
 	margin-top: 25px;
 }
+.single-service .soclink-content {
+	margin-top: 25px;
+}
 .single-service .service-content h4 {
 	font-size: 20px;
 	font-weight: 600;
 	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	margin-bottom: 12px;
+}
+.single-service .soclink-content h4 {
+	font-size: 20px;
+	font-weight: 600;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;

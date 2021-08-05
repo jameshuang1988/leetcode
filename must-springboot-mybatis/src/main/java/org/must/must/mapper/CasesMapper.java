@@ -9,6 +9,7 @@ package org.must.must.mapper;
 import java.util.List;
 
 import org.must.must.model.Active;
+import org.must.must.model.Cases;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -20,9 +21,10 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ActiveMapper {
+public interface CasesMapper {
 	
-	List<Active> getAllActive();	
-	List<Active> getActiveById(String Id);
+	List<Cases> getAllCase();	
+	List<Cases> getCaseByCase(String Id);
+	List<Cases> getCaseByCaseNo(String id);
 
 }
